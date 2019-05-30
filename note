@@ -1,1 +1,12 @@
-nginx -t 语法检查
+nginx -t 作用：测试配置是否正确
+如果运行不正常，用 service nginx status 查看运行状态
+如果还是不能启动，查看 log，这个文件会告诉你失败的原因
+    $ tail /var/log/nginx/error.log
+   
+ nginx -s stop    作用：立即停止
+ nginx -s quit    作用：优雅停止
+ nginx -s reload  作用：加载最新配置
+ 
+ nginx -s -reopen 作用：重新打开日志
+ 
+ kill-
