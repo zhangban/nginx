@@ -5,8 +5,47 @@ nginx -t 作用：测试配置是否正确
    
  nginx -s stop    作用：立即停止
  nginx -s quit    作用：优雅停止
- nginx -s reload  作用：加载最新配置
  
- nginx -s -reopen 作用：重新打开日志
+
+
+ nginx -s reload  作用：修改了配置文件使之生效，加载最新配置
  
- kill-
+ nginx -s -reopen 作用：重新打开日志，备份日志之后，使新建日志文件生效
+ 
+ --------------------------------------------------------
+Ubuntu:
+nginx 配置文件路径：
+cd /etc/nginx
+ls
+conf.d              mime.types          nginx.conf      sites-enabled
+fastcgi_params      naxsi_core.rules    proxy_params    uwsgi_params
+koi-utf             naxsi.rules         scgi_params     win-utf
+koi-win             naxsi-ui.conf.1.4.1                 sites-available
+
+cd /var/log/nginx
+
+nginx 的配置路径：cd /etc/nginx/nginx.conf
+nginx web路径：cd /usr/share/nginx/html
+
+----------------------------------------------------------------------------
+where is nginx:
+/usr/sbin/nginx
+html页面存放在：   /usr/share/nginx/html
+ls :50x.html    index.html
+
+vi /etc/nginx/conf.d  :此文件打开是空的
+----------------------------------------------------------------------------
+https://blog.csdn.net/weixin_34247299/article/details/87344421
+
+nginx 在Ubuntu下的一些常用命令：
+sudo /etc/init.d/nginx start    //启动
+sudo /etc/init.d/nginx stop    //停止
+sudo /etc/init.d/nginx restart    //重启
+sudo nginx  -s reload   //重新加载配置文件
+
+主要文件路径
+虚拟主机目录在/var/www
+日志放在了/var/log/nginx
+/etc/init.d/下创建了启动脚本nginx(需手动配置)
+
+work
