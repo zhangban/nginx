@@ -1,3 +1,12 @@
 /bin
 　　bin是binary的缩写。使用的命令。cp、ls、cat . ..
+/etc
+  配置文件
+/usr/bin
+  可执行文件
+文档一般在 /usr/share
+  ubuntu 下用 whereis nginx 查看该软件的文件都存在哪些目录中！！！！！！！！！！！！！！！！！！！！
+  which  xxx   此命令只会输出一个目录
+  编译安装时可以自己设定，把一个文件都放在一个目录下（例如  ./configure -- prefix=/usr/local/nginx*****），卸载是只需要删除目录即可
+  
   
