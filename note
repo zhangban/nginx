@@ -48,4 +48,22 @@ sudo nginx  -s reload   //重新加载配置文件
 日志放在了/var/log/nginx
 /etc/init.d/下创建了启动脚本nginx(需手动配置)
 
-work
+
+server 用来配置虚拟主机（虚拟主机就是一台电脑上配置多个服务，）virturlhost
+例一：基于域名的虚拟主机
+    server {
+            listen       8080;
+            
+            server_name  Mume.com;
+            localtion / {
+                root  /./../;
+                #根目录，相对路径或绝对路径
+                index index.php  index.html;
+                #网站的入口文件，默认主页
+            }
+    }
+写完之后，怎么发挥作用
+../sbin/nginx -s reload
+-------------------------------------------------
+除了main格式外，你可以
+#下面声明a.com 使用mylog格式日志
